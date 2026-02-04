@@ -14,7 +14,7 @@ protected:
 
 TEST_F(ClaculatorTestFixture,AssertAddFunction){
     
-    int actualRe
+    
     int expectedResult=30;
     //Act - invoke code under test
     actualResult=add(operand1,operand2);
