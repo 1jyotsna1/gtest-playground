@@ -3,11 +3,18 @@
 
 //Test Cases
 //Given 10,20 when add method called , Then result 30 is expected
-TEST(CalculatorTests,AssertAddFunction){
-    //Arrange - preconditions , prepare input data
-    int operand1=10;
-    int operand2=20;
+
+class ClaculatroeTestFixture : public ::testing::Test {
+protected:
+    int  operand1  = 10;
+    int operand2 = 20;
     int actualResult=0;
+};
+
+
+TEST_F(ClaculatroeTestFixture,AssertAddFunction){
+    
+    int actualRe
     int expectedResult=30;
     //Act - invoke code under test
     actualResult=add(operand1,operand2);
@@ -17,12 +24,9 @@ TEST(CalculatorTests,AssertAddFunction){
 
 }
 
-TEST(CalculatorTests,AssertSubFunction){
+TEST_F(ClaculatroeTestFixture,AssertSubFunction){
     //Arrange - preconditions , prepare input data
-    int operand1=20;
-    int operand2=10;
-    int actualResult=0;
-    int expectedResult=10;
+     int expectedResult=-10;
     //Act - invoke code under test
     actualResult=sub(operand1,operand2);
     //Assert - validate measurement points
