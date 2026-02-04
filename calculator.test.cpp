@@ -4,7 +4,7 @@
 //Test Cases
 //Given 10,20 when add method called , Then result 30 is expected
 
-class ClaculatroeTestFixture : public ::testing::Test {
+class ClaculatorTestFixture : public ::testing::Test {
 protected:
     int  operand1  = 10;
     int operand2 = 20;
@@ -12,7 +12,7 @@ protected:
 };
 
 
-TEST_F(ClaculatroeTestFixture,AssertAddFunction){
+TEST_F(ClaculatorTestFixture,AssertAddFunction){
     
     int actualRe
     int expectedResult=30;
@@ -24,7 +24,7 @@ TEST_F(ClaculatroeTestFixture,AssertAddFunction){
 
 }
 
-TEST_F(ClaculatroeTestFixture,AssertSubFunction){
+TEST_F(ClaculatorTestFixture,AssertSubFunction){
     //Arrange - preconditions , prepare input data
      int expectedResult=-10;
     //Act - invoke code under test
