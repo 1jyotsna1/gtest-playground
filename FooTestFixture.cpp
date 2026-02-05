@@ -28,8 +28,7 @@ class FooTest : public testing::Test {
     out<<"TestCase Teardown"<<endl;
   }
 
-  // Some expensive resource shared by all tests.
-  static T* shared_resource_;
+  
 };
 
 
