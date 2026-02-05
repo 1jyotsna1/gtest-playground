@@ -5,7 +5,11 @@
 #include <iostream>
 using std::cout, std::flush, std::this_thread::sleep_for, std::chrono::seconds;
 
-//Format functionality
+
+using OutputFnPtr = void (*)(const char*);
+using  FomatFnPtr = void (*)();
+
+//Format functionality - real dependency
 void blinkAlert() {
   for (int i = 0; i < 6; i++) {
     cout << "\r* " << flush;
@@ -14,6 +18,13 @@ void blinkAlert() {
     sleep_for(seconds(1));
   }
 }
+
+//Console Display Function - real dependency
+void displayOnConsole(string content){
+  cout << content<<endl;
+}
+
+
 /* Decision Logic Functions */
 bool isTemperatureCritical(float temperature) {
   return temperature > 102 || temperature < 95;
@@ -29,23 +40,23 @@ bool isSpo2Critical(float spo2) {
 
 //Single Responsibility Principle Applied
 //Co-oridanator- Facade Api
-int vitalsOk(float temperature, float pulseRate, float spo2) {
+int vitalsOk(float temperature, float pulseRate, float spo2,OutputFn displayFun,FomatFnPtr formatFn) {
 
   if (isTemperatureCritical(temperature)) {
-    cout << "Temperature is critical!\n";
-    blinkAlert();
+    displayFun("Temperature is critical!");
+    formatFn();
     return 0;
   }
 
   if (isPulseRateCritical(pulseRate)) {
-    cout << "Pulse Rate is out of range!\n";
-    blinkAlert();
+    OutputFnPtr("Pulse Rate is out of range!");
+   formatFn();
     return 0;
   }
 
   if (isSpo2Critical(spo2)) {
-    cout << "Oxygen Saturation out of range!\n";
-    blinkAlert();
+    OutputFnPtr("Oxygen Saturation out of range!");
+    formatFn();
     return 0;
   }
 
