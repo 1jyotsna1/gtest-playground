@@ -21,7 +21,7 @@ bool isSpo2Critical(float spo2) {
 
 //Single Responsibility Principle Applied
 //Co-oridanator- Facade Api
-int vitalsOk(float temperature, float pulseRate, float spo2,OutputFn displayFun,FomatFnPtr formatFn) {
+int vitalsOk(float temperature, float pulseRate, float spo2,OutputFnPtr displayFun,FomatFnPtr formatFn) {
 
   if (isTemperatureCritical(temperature)) {
     displayFun("Temperature is critical!");
