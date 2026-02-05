@@ -8,7 +8,7 @@ using::testing::_;
 class MockDisplay: public  IDisplayContent{
 public:
   
-   MOCK_METHOD(void, display,(string content), (override))
+   MOCK_METHOD(void, display,(string content), (override));
 };
 
 class MockAnimator: public IAnimator{
