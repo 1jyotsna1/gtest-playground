@@ -34,7 +34,7 @@ EXPECT_EQ(displayCallCount,0);
 EXPECT_EQ(blickCallCount,0);
 EXPECT_EQ(actualResult,1);
 }
-98.6f, 101.0f, 98.0f
+
 
 TEST(MonitorTest,PulseRateTooHigh_ReturnsNotO){
     //Happy Path
