@@ -1,0 +1,16 @@
+1.Refactor the code for Unit testability
+  a.Reduce Cyclomatic Complexity <=3
+  b.Remove Code Duplication
+  c.Separte Dependencies
+  d.Abstract Dependencies
+
+2. Test All the Behvaior of function 
+
+
+//thread
+int add(int ,int y){
+     if(x==0 && y==0){ return 0;}
+      return x+y;
+}
+
+add(10,20);
