@@ -58,7 +58,7 @@ INSTANTIATE_TEST_SUITE_P(
 
 TEST_P(CalculatorTest, Test1) {
   
-    onst auto& data = GetParam();
+    const auto& data = GetParam();
     int actualResult=add(data.operand1,data.operand2);
     EXPECT_EQ(actualResult,data.expectedResult);
 }
