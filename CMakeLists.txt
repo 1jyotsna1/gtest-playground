@@ -19,7 +19,7 @@ add_executable(test-monitor ${SOURCES})
 
 target_link_libraries(
   test-monitor
-  GTest::gtest_main
+  GMock::gmock_main
 )
 include(GoogleTest)
 gtest_discover_tests(test-monitor)
