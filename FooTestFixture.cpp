@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+#include <gtest/gtest.h>
 
 class FooTest : public testing::Test {
  protected:
