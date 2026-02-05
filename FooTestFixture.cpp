@@ -49,7 +49,7 @@ INSTANTIATE_TEST_SUITE_P(
         CalculatorData{10, 20, 30},
         CalculatorData{10, 30, 40},
         CalculatorData{20, 20, 40},
-        CalculatorData{100, 202, 300},
+        CalculatorData{100, 202, 300}
     )
 );
 
