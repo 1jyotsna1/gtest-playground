@@ -6,25 +6,6 @@
 using std::cout, std::flush, std::this_thread::sleep_for, std::chrono::seconds;
 
 
-using OutputFnPtr = void (*)(const char*);
-using  FomatFnPtr = void (*)();
-
-//Format functionality - real dependency
-void blinkAlert() {
-  for (int i = 0; i < 6; i++) {
-    cout << "\r* " << flush;
-    sleep_for(seconds(1));
-    cout << "\r *" << flush;
-    sleep_for(seconds(1));
-  }
-}
-
-//Console Display Function - real dependency
-void displayOnConsole(string content){
-  cout << content<<endl;
-}
-
-
 /* Decision Logic Functions */
 bool isTemperatureCritical(float temperature) {
   return temperature > 102 || temperature < 95;
